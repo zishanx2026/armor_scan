@@ -1,0 +1,32 @@
+build/
+cmake-build-*/
+out/
+dist/
+target/
+
+# 编译文件
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.lib
+*.pdb
+
+# 依赖/缓存
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 环境与密钥
+.env
+.env.*
+
+# 编辑器和系统
+.idea/
+.vscode/
+.DS_Store
+video.mp4
