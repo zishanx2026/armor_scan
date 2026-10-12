@@ -19,8 +19,8 @@ struct Armor
     float angle;
     EnemyColor color;
    
-    int id;              // 唯一 ID
-    int miss_count = 0;  // 连续丢失帧数
+    int id;              
+    int miss_count = 0;  
 };
 class Frame
 {
@@ -57,12 +57,12 @@ private:
     std::vector<cv::RotatedRect> m_light_bars_blue;
     std::vector<cv::RotatedRect> m_light_bars_red;
 
-    std::vector<Armor> m_prev_armors;   // 上一帧的装甲板
-    int m_miss_count = 0;                // 连续丢失帧数
+    std::vector<Armor> m_prev_armors;  
+    int m_miss_count = 0;                
      
-    std::vector<Armor> m_tracked_armors;   // 跟踪列表
-    int m_next_id = 0;                     // 分配 ID 用
-    static constexpr int MAX_MISS = 20;    // 最多补 10 帧
-    static constexpr float MATCH_DIST = 60; // 匹配距离阈值
+    std::vector<Armor> m_tracked_armors;   
+    int m_next_id = 0;                     
+    static constexpr int MAX_MISS = 10;    
+    static constexpr float MATCH_DIST = 60; 
 
 };
